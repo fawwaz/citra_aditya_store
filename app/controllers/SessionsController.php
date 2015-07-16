@@ -10,7 +10,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function create()
 	{
-		if(Auth::check()) return Redirect::to('user');
+		if(Auth::check()) return Redirect::to('dashboard');
 		
 		return View::make('sessions.create');
 	}
@@ -26,7 +26,7 @@ class SessionsController extends \BaseController {
 		$attempt = Auth::attempt(Input::only('email','password'));
 		
 		if($attempt) {
-			return Redirect::to('user');
+			return Redirect::to('dashboard');
 		} else {
 			return Redirect::back()->withInput();
 		}

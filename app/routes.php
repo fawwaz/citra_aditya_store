@@ -16,7 +16,7 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('user', function() {
+Route::get('dashboard', function() {
 	return View::make('sessions/user');
 })->before('auth');
 
