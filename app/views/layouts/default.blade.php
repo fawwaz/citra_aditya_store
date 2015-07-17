@@ -1,27 +1,30 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Laravel Auth Tutorial</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    @include('includes.head')
 </head>
-
 <body>
-	<div class="container">
-		<div>
-			<h1>Laravel Auth Tutorial</h1>
-		</div>
+<div class="container">
 
-		@yield('content')
+    <header class="row">
+        @include('includes.header')
+    </header>
 
-	</div>
+    <div id="main" class="row">
+
+        @yield('content')
+
+    </div>
+
+    <footer class="row">
+    	@include('includes.footer')
+    </footer>
+	
+		<!-- Scripts are placed here -->
+	{{ HTML::script('bower_components/jquery/dist/jquery.min.js') }}
+	{{ HTML::script('bower_components/bootstrap/dist/js/bootstrap.min.js') }}
+
+</div>
 </body>
-
 </html>
+

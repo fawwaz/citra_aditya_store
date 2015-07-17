@@ -23,3 +23,11 @@ Route::get('dashboard', function() {
 Route::get('login', 'SessionsController@create');
 Route::get('logout', 'SessionsController@destroy');
 Route::resource('sessions', 'SessionsController');
+
+
+Route::resource('categories', 'CategoriesController');
+Route::resource('authors', 'AuthorsController');
+
+Route::get('tes',function(){
+	return View::make('dashboard.index');
+});
