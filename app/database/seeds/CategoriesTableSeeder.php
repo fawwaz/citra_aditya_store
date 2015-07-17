@@ -1,20 +1,29 @@
 <?php
 
-// Composer: "fzaninotto/faker": "v1.3.0"
-use Faker\Factory as Faker;
 
 class CategoriesTableSeeder extends Seeder {
 
 	public function run()
 	{
-		$faker = Faker::create();
+		DB::table('categories')->delete();
+        $this->command->info('Sukses membersihkan tabel categories');
 
-		foreach(range(1, 10) as $index)
-		{
-			Category::create([
+        $c1 = Category::create(array(
+        	'name' => 'hukum',
+        	'desc' => 'tentang hukum dan kaitanya dengan indonesia'
+        ));
 
-			]);
-		}
+        $c2 = Category::create(array(
+        	'name' => 'sosial politik',
+        	'desc' => 'tentang sosial dan politik saja'
+        ));
+
+        $c2 = Category::create(array(
+        	'name' => 'jurnalistik',
+        	'desc' => 'deskripsi tentang jurnalistik'
+        ));
+        $this->command->info('Sukses mengisi tabel kategori');
+
 	}
 
 }

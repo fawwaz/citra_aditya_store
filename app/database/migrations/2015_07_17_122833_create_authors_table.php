@@ -16,8 +16,8 @@ class CreateAuthorsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
-			$table->text('history');
-			$table->text('contact');
+			$table->text('history')->nullable();
+			$table->string('contact')->nullable();
 			$table->timestamps();
 		});
 	}
