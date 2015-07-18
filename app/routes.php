@@ -25,11 +25,12 @@ Route::get('logout', 'SessionsController@destroy');
 Route::resource('sessions', 'SessionsController');
 
 
+// Mesti di protect harus auth dulu
 Route::resource('categories', 'CategoriesController');
 Route::resource('authors', 'AuthorsController');
 Route::resource('books', 'BooksController');
 
 
 Route::get('tes',function(){
-	return View::make('dashboard.index');
+	return View::make('front.tes');
 });

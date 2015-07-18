@@ -1,30 +1,22 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    @include('includes.head')
+    @include('includes.head-pages')
+    @yield('customcss')
 </head>
+
 <body>
-<div class="container">
+    @include('includes.navigation-pages')
+    
+    @yield('content')
 
-    <header class="row">
-        @include('includes.header')
-    </header>
+    <!-- jQuery -->
+    {{ HTML::script('bower_components/sb-admin/js/jquery.js') }}
 
-    <div id="main" class="row">
+    <!-- Bootstrap Core JavaScript -->
+    {{ HTML::script('bower_components/sb-admin/js/bootstrap.min.js') }}
 
-        @yield('content')
-
-    </div>
-
-    <footer class="row">
-    	@include('includes.footer')
-    </footer>
-	
-		<!-- Scripts are placed here -->
-	{{ HTML::script('bower_components/jquery/dist/jquery.min.js') }}
-	{{ HTML::script('bower_components/bootstrap/dist/js/bootstrap.min.js') }}
-
-</div>
 </body>
-</html>
 
+</html>
