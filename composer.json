@@ -10,7 +10,8 @@
 		"zizaco/entrust": "1.2.*@dev",
 		"zizaco/confide": "~4.3@dev",
 		"way/generators": "~2.0",
-		"gloudemans/shoppingcart": "~1.2"
+		"gloudemans/shoppingcart": "~1.2",
+		"intervention/image": "^2.3"
 	},
 	"autoload": {
 		"classmap": [

@@ -27,6 +27,8 @@ Route::resource('sessions', 'SessionsController');
 
 Route::resource('categories', 'CategoriesController');
 Route::resource('authors', 'AuthorsController');
+Route::resource('books', 'BooksController');
+
 
 Route::get('tes',function(){
 	return View::make('dashboard.index');

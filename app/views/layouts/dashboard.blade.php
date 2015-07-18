@@ -4,7 +4,7 @@
 <head>
 
     @include('includes.head-dashboard')
-
+    @yield('customcss')
 </head>
 
 <body>
@@ -40,6 +40,8 @@
     {{ HTML::script('bower_components/sb-admin/js/plugins/morris/raphael.min.js') }}
     {{ HTML::script('bower_components/sb-admin/js/plugins/morris/morris.min.js') }}
     {{ HTML::script('bower_components/sb-admin/js/plugins/morris/morris-data.js') }}
+    
+    @yield('customjs')
     <!-- // <script src="js/plugins/morris/raphael.min.js"></script> -->
     <!-- // <script src="js/plugins/morris/morris.min.js"></script> -->
     <!-- // <script src="js/plugins/morris/morris-data.js"></script> -->

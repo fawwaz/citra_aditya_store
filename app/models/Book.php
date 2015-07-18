@@ -6,4 +6,8 @@ class Book extends \Eloquent {
 	public function authors(){
 		return $this->belongsToMany('Author');
 	}
+
+	public function category(){
+		return $this->belongsTo('Category');
+	}
 }
