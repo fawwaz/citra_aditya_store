@@ -125,6 +125,7 @@ return array(
 		'Zizaco\Confide\ServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
+		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
 	),
 
 	/*
@@ -194,6 +195,7 @@ return array(
 		'Entrust'		  => 'Zizaco\Entrust\EntrustFacade',
 		'Confide'		  => 'Zizaco\Confide\Facade',
 		'Image' 		  => 'Intervention\Image\Facades\Image',
+		'Cart'            => 'Gloudemans\Shoppingcart\Facades\Cart',
 	),
 
 );

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/hello', function()
 {
 	return View::make('hello');
 });
@@ -31,6 +31,13 @@ Route::resource('authors', 'AuthorsController');
 Route::resource('books', 'BooksController');
 
 
-Route::get('tes',function(){
-	return View::make('front.tes');
+Route::get('/',function(){
+	return View::make('front.home');
 });
+
+Route::get('/explore/category/{id}','ExploreController@byCategory');
+Route::get('/explore/author/{id}','ExploreController@byAuthor');
+Route::get('/explore/search/{query}','ExploreController@bySearch');
+
+
+Route::resource('carts','CartsController');

@@ -18,7 +18,7 @@
 			<h3>Latest Features</h3>
 		</div>
 	</div>
-	
+
 
 	<div class="row text-center">
 
