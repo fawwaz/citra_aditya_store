@@ -12,7 +12,8 @@ class BooksController extends \BaseController {
 	 */
 	public function index()
 	{
-		$books = Book::all();
+		//$books = Book::all();
+		$books = Book::paginate(4);
 		return View::make('dashboard.books.index',compact('books'));
 	}
 

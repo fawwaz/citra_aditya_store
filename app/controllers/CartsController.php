@@ -83,9 +83,21 @@ class CartsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
-	{
-		//
+	public function update()
+	{		
+		$qty = Input::get('quantity');
+		$z = "";
+		foreach ($qty as $q=>$v) {
+			Cart::update($q,$v);
+			//$z .= $q . " : ". $v;
+		}
+
+		$cart_contents = Cart::content();
+
+		Session::flash('message', 'Successfully updated books!');
+		//return View::make('front.cart.index',compact('cart_contents','z'));
+		return Redirect::to('carts');
+		//return "Done changed".var_dump(Input::get('quantity'));
 	}
 
 	/**

@@ -97,6 +97,7 @@
 							</tbody>
 						</table>
 					</div>
+					{{$books->links()}}
 					<h3 style="color:red">JANGAN LUPA ADA PAGINATION</h3>
 					<div class="text-right">
 						<a href="#">View All Transactions <i class="fa fa-arrow-circle-right"></i></a>
